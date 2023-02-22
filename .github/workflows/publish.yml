@@ -27,11 +27,11 @@ jobs:
         run: npm install -g hexo
       - name: Generate blog
         run: hexo generate
-      # - name: SSH
-      #   uses: webfactory/ssh-agent@v0.7.0
-      #   with:
+      - name: SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
       #     # submodules: false # Checkout private submodules(themes or something else).
-      #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       # Deploy hexo blog website.
       - name: Deploy
