@@ -107,6 +107,7 @@ deploy:
   user: 'user'
   root: '/mnt/hlam/WWW/jquery.ru/pub'
   delete: false
+  port: 22
 jsonContent:
   file: /custom-file-name.json
 
