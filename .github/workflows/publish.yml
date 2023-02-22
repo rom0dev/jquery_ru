@@ -24,9 +24,9 @@ jobs:
     - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm ci
-      name: Install hexo globally
+    - name: Install hexo globally
       run: npm install -g hexo
-      name: Generate blog
+    - name: Generate blog
       run: hexo generate
     
     # Deploy hexo blog website.
