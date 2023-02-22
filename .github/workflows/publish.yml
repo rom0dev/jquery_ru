@@ -28,7 +28,7 @@ jobs:
       run: npm install -g hexo
     - name: Generate blog
       run: hexo generate
-    - uses: webfactory/ssh-agent@v0.7.0
+      uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     # Deploy hexo blog website.
