@@ -53,9 +53,21 @@ jobs:
       #   with:
       #     ssh-private-key: ${{ secrets.TEST_SECRET }}
 
-      # Deploy hexo blog website.
-      - name: Deploy
-        run: hexo deploy
+      # # Deploy hexo blog website.
+      # - name: Deploy
+      #   run: hexo deploy
+
+
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@5.2.1
+      with:
+        switches: -avzr --delete
+        path: pub/
+        remote_path: mnt/hlam/WWW/jquery.ru/pub
+        remote_host: jquery.ru
+        remote_user: user
+        remote_key: ${{ secrets.DEPLOY_KEY }}
+
 
       # Use the output from the `deploy` step(use for test action)
       - name: Get the output
