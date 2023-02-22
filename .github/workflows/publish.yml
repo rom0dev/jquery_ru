@@ -30,9 +30,9 @@ jobs:
       # Deploy hexo blog website.
       - name: Deploy
         uses: webfactory/ssh-agent@v0.7.0]
-          with:
-            submodules: false # Checkout private submodules(themes or something else).
-            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        with:
+          submodules: false # Checkout private submodules(themes or something else).
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         run: hexo deploy
       #   id: deploy
       #   uses: sma11black/hexo-action@v1.0.3
