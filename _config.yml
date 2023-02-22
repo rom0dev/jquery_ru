@@ -104,7 +104,7 @@ theme: hexo-theme-replica
 deploy:
   type: 'rsync'
   host: 'jquery.ru'
-  user: 'user'
+  user: 'root'
   root: '/mnt/hlam/WWW/jquery.ru/pub'
   delete: false
   port: 22
