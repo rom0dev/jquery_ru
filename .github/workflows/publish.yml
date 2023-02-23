@@ -35,7 +35,7 @@ jobs:
           known_hosts: unnecessary
 
       - name: Openssh
-        run apt update && apt install openssh
+        run: apt update && apt install openssh
 
       - name: Adding Known Hosts
         run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
