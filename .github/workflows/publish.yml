@@ -27,17 +27,30 @@ jobs:
       - name: Generate blog
         run: hexo generate
 
-      - name: Create SSH key
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$SSH_PRIVATE_KEY" > ../private.key
-          sudo chmod 600 ../private.key
-          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-        shell: bash
-        env:
-          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
-          SSH_KEY_PATH: ${{ github.workspace }}/../private.key
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: unnecessary
+
+      - name: Adding Known Hosts
+        run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./pub/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/mnt/hlam/WWW/jquery.ru/pub
+
+      # - name: Create SSH key
+      #   run: |
+      #     mkdir -p ~/.ssh/
+      #     echo "$SSH_PRIVATE_KEY" > ../private.key
+      #     sudo chmod 600 ../private.key
+      #     echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+      #   shell: bash
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+      #     SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
+      #     SSH_KEY_PATH: ${{ github.workspace }}/../private.key
 
       # - name: Install SSH Key
       #   uses: shimataro/ssh-key-action@v2
@@ -58,15 +71,15 @@ jobs:
       #   run: hexo deploy
 
 
-      - name: rsync deployments
-        uses: burnett01/rsync-deployments@5.2.1
-        with:
-          switches: -avzr --delete -4 
-          path: pub/
-          remote_path: mnt/hlam/WWW/jquery.ru/pub
-          remote_host: jquery.ru
-          remote_user: user
-          remote_key: ${{ secrets.DEPLOY_KEY }}
+      # - name: rsync deployments
+      #   uses: burnett01/rsync-deployments@5.2.1
+      #   with:
+      #     switches: -avzr --delete -4 
+      #     path: pub/
+      #     remote_path: mnt/hlam/WWW/jquery.ru/pub
+      #     remote_host: jquery.ru
+      #     remote_user: user
+      #     remote_key: ${{ secrets.DEPLOY_KEY }}
 
 
       # Use the output from the `deploy` step(use for test action)
