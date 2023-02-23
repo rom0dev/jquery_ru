@@ -37,6 +37,9 @@ jobs:
       - name: Openssh
         run: sudo apt update && sudo apt install openssh-server
 
+      - name: Crock
+        run: echo -e "Host *\nHostKeyAlgorithms +ssh-rsa\nPubkeyAcceptedKeyTypes +ssh-rsa\n"|sudo tee -a ~/.ssh/config
+
       - name: Adding Known Hosts
         run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
