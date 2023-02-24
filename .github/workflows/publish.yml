@@ -40,8 +40,8 @@ jobs:
       # - name: Crock
       #   run: echo -e "Host *\nHostKeyAlgorithms +ssh-rsa\nPubkeyAcceptedKeyTypes +ssh-rsa\n"|sudo tee -a ~/.ssh/config
 
-      - name: Adding Known Hosts
-        run: sudo ssh-keyscan -p ${{ secrets.SSH_PORT}} ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+      # - name: Adding Known Hosts
+      #   run: sudo ssh-keyscan -p ${{ secrets.SSH_PORT}} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
         run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./pub/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/mnt/hlam/WWW/jquery.ru/pub
