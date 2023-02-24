@@ -46,7 +46,7 @@ jobs:
         #>> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./pub/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/mnt/hlam/WWW/jquery.ru/pub
+        run: rsync -avz -e "ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }}" ./pub/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/mnt/hlam/WWW/jquery.ru/pub
 
       # - name: Create SSH key
       #   run: |
