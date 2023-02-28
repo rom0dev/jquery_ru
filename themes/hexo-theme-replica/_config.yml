@@ -1,17 +1,17 @@
 # left-side user profile
-avatar: # by default https://octodex.github.com/images/baracktocat.jpg
-location:
-email:
+avatar: /img/avatar.jpg# by default https://octodex.github.com/images/baracktocat.jpg
+location: Internet
+email: romdev@vivaldi.net
 social:
-  github:
-  weibo:
-  linkedin:
+  github: https://github.com/rom0dev/
+  telegram: https://t.me/RobotIsHere
+  linkedin: https://www.linkedin.com/in/rominsky/
 
 # navbar menu
 menu:
- archives: true
- tags: true
- categories: true
+ archives: false
+ tags: false
+ categories: false
 
 rss_dir: atom.xml
 

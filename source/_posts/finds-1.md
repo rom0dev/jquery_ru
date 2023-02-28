@@ -1,5 +1,5 @@
 ---
-# categories: do_it_right
+categories: finds
 title: "Находки. Выпуск 1"
 date: 2023-01-01 00:00:00
 ---
