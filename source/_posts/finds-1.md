@@ -1,7 +1,7 @@
 ---
 categories: finds
 title: "Находки. Выпуск 1"
-date: 2023-01-01 00:00:00
+date: 2023-03-07 00:00:00
 ---
 
 Этим постом открываю новую рубрику "Находки". В этой рбрике буду размещать то, что нашёл и посчитал полезным или интересным.
@@ -14,12 +14,12 @@ date: 2023-01-01 00:00:00
 * [МамаЗануда](https://mamazanuda.ru/) - Блог о методиках развития, книгах для малышей, питании, безвредной косметике, средствах для стирки и многом другом
 * [Скачать аффирмации](https://allmp3.su/music/%D0%B0%D1%84%D1%84%D0%B8%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F) - здесь можно скачать аффирмации
 * [ACT](https://github.com/nektos/act) - запускать github actions локально
-
-!!!
-* [Firefox Multi-Account Containers
-by Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) - расширение для браузера Firefox, которое позволяет разделить 
+* [SSDFS](https://news.itsfoss.com/ssdfs-linux-nvme/) - статья про новую файловую систему, созданную для новых SSD дисков.
 
 ## Программирование
+
+### C++
+[C++ roadmap](https://salmer.github.io/CppDeveloperRoadmap/) - путь изучения C++
 
 ### Typescipt
 
