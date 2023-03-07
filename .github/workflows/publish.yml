@@ -29,7 +29,6 @@ jobs:
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-        
       # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
       # - name: Cache node modules
       #   uses: actions/cache@v1
@@ -40,72 +39,6 @@ jobs:
       #     restore-keys: |
       #       ${{ runner.os }}-node-
      
-
-
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: unnecessary
-
-      # - name: Openssh
-      #   run: sudo apt update && sudo apt install openssh-server
-
-      # - name: Crock
-      #   run: echo -e "Host *\nHostKeyAlgorithms +ssh-rsa\nPubkeyAcceptedKeyTypes +ssh-rsa\n"|sudo tee -a ~/.ssh/config
-
-      # - name: Adding Known Hosts
-      #   run: ssh-keyscan ${{ secrets.SSH_HOST }} 
-        #run: ssh-keyscan -p ${{ secrets.SSH_PORT}} ${{ secrets.SSH_HOST }} 
-        #>> ~/.ssh/known_hosts
-
-      - name: Deploy with rsync
-        #run: rsync -avz -e "ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }}" ./pub/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/mnt/hlam/WWW/jquery.ru/pub
-        # run: rsync -avz ./pub/ rom@134.122.90.46:/tmp
-        run: rsync -avz -e "ssh -o StrictHostKeyChecking=no -p 22" ./pub/ user@jquery.ru:/WWW/jquery.ru/
-
-      # - name: Create SSH key
-      #   run: |
-      #     mkdir -p ~/.ssh/
-      #     echo "$SSH_PRIVATE_KEY" > ../private.key
-      #     sudo chmod 600 ../private.key
-      #     echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-      #   shell: bash
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-      #     SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
-      #     SSH_KEY_PATH: ${{ github.workspace }}/../private.key
-
-      # - name: Install SSH Key
-      #   uses: shimataro/ssh-key-action@v2
-      #   with:
-      #     key: ${{ secrets.TEST_SECRET }} 
-      #     known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
-
-      #- name: Adding Known Hosts
-        #run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      # - name: Install SSH Client 🔑
-      #   uses: webfactory/ssh-agent@v0.4.0
-      #   with:
-      #     ssh-private-key: ${{ secrets.TEST_SECRET }}
-
-      # # Deploy hexo blog website.
-      # - name: Deploy
-      #   run: hexo deploy
-
-
-      # - name: rsync deployments
-      #   uses: burnett01/rsync-deployments@5.2.1
-      #   with:
-      #     switches: -avzr --delete -4 
-      #     path: pub/
-      #     remote_path: mnt/hlam/WWW/jquery.ru/pub
-      #     remote_host: jquery.ru
-      #     remote_user: user
-      #     remote_key: ${{ secrets.DEPLOY_KEY }}
-
-
       # Use the output from the `deploy` step(use for test action)
       - name: Get the output
         run: |
