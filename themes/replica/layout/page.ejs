@@ -5,13 +5,8 @@
     <%- partial('_partial/navbar-secondary', {nav_selected: page.title}) %>
 
     <div class="body-secondary">
-
-      <% if(page.title === 'tags'){ %>
-      <%- list_tags() %>
-      <% } %>
-      <% if(page.title === 'categories'){ %>
-      <%- list_categories() %>
-      <% } %>
+      <% if (page.type && page.type === "tags") { %><%- list_tags() %><% } %> <% if (page.type &&
+      page.type === "categories") { %><%- list_categories() %><% } %>
     </div>
   </div>
 </div>

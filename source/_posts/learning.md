@@ -31,7 +31,25 @@ date: 2023-01-01 00:00:00
 # Сайты
 
 ## Бесплатное обучение
-
+### Бесплатные курсы от Google
+* [Google Project Management](https://www.coursya.com/product/google-project-management-2)
+* [Agile Project Management](https://www.coursya.com/product/agile-project-management)
+* [Project Execution: Running the Project](https://www.coursya.com/product/project-execution-running-the-project)
+* [Foundations of Project Management](https://www.coursya.com/product/foundations-of-project-management)
+* [Project Initiation: Starting a Successful Project](https://www.coursya.com/product/project-initiation-starting-a-successful-project)
+* [Project Planning: Putting It All Together](https://www.coursya.com/product/project-planning-putting-it-all-together/)
+* [Google Analytics for Power Users](https://www.coursya.com/product/google-analytics-certification-coursya)
+* [Fundamentals of digital marketing](https://www.coursya.com/product/fundamentals-of-digital-marketing-course)
+* [Python Basics for Data Analysis](https://www.coursya.com/product/learn-python-basics-for-data-analysis)
+* [Data Science Foundations](https://www.coursya.com/product/data-science-foundations)
+* [Advanced Google Analytics](https://www.coursya.com/product/google-data-analytics)
+* [Get started with the Google Maps Platform](https://www.coursya.com/product/get-started-with-google-maps-platform-web-google-developers)
+* [Google Cloud Computing Foundations: Cloud Computing Fundamentals](https://www.coursya.com/product/google-cloud-computing-foundations-cloud-computing-fundamentals-google-cloud-skills-boost)
+* [Google Cloud Computing Foundations: Infrastructure in Google Cloud](https://www.coursya.com/product/google-cloud-computing-foundations-infrastructure-in-google-cloud-google-cloud-skills-boost)
+* [Google Cloud Computing Foundations: Networking & Security in Google Cloud](https://www.coursya.com/product/google-cloud-computing-foundations-networking-security-in-google-cloud-google-cloud-skills-boost)
+* [Machine Learning Basics](https://www.coursya.com/product/machine-learning-basics-courses-google-digital-skills-unlocked)
+* [Machine Learning Crash Course](https://www.coursya.com/product/machine-learning-crash-course)
+* [Data Science with Python](Data Science with Python)
 ### Разное
 
 * Здесь всё построено как в ВУЗЕ: скучные лекции, лонгриды и т.д. На любителя: [Интуит](https://intuit.ru/i)
@@ -42,6 +60,9 @@ date: 2023-01-01 00:00:00
 ### Frontend
 * [htmlacademy.ru](https://htmlacademy.ru/courses#fe-start) - несколько курсов для введения во фронтенд
 
+Курсы по Vue от соавтора Vue Ben Hong
+* [magnet:?xt=urn:btih:586574200fae6cca2f1771386869ad422bfa88f6&dn=Vue%203%20Fundamentals&tr=http%3A%2F%2Fbt4.t-ru.org%2Fann&tr=http%3A%2F%2Fretracker.local%2Fannounce](Введение по Vue)
+* [magnet:?xt=urn:btih:3d418a3ec8c11d34e49afa48fb8a9554d6c52fcb&dn=Vue%203%20and%20Typescript&tr=http%3A%2F%2Fbt3.t-ru.org%2Fann&tr=http%3A%2F%2Fretracker.local%2Fannounce](Vue и Typescript) от того же автора.
 ### Machine Learning
 
 * [𝗦𝘁𝗮𝗻𝗳𝗼𝗿𝗱 𝗨𝗻𝗶𝘃𝗲𝗿𝘀𝗶𝘁𝘆 𝗖𝗦𝟮𝟮𝟵: 𝗠𝗮𝗰𝗵𝗶𝗻𝗲 𝗟𝗲𝗮𝗿𝗻𝗶𝗻𝗴](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
@@ -61,14 +82,14 @@ date: 2023-01-01 00:00:00
 ## Платное обучение
 
 * [merion academy](https://wiki.merionet.ru/merion-academy/)
-* []()
 
 ### Frontend
 
 * [Frontend Masters](https://frontendmasters.com/)
 
-
+### C++
+[C++ roadmap](https://salmer.github.io/CppDeveloperRoadmap/) - путь изучения C++
 # Английский язык
 ## Боты и приложения
-* [lingopractices_bot](https://t.me/lingopractices_bot) Бот для поиска с кем можно поговорить
+* [lingopractices_bot](https://t.me/lingopractices_bot) Бот для поиска с кем можно поговорить на английском
 * 

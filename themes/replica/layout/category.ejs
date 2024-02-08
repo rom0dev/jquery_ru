@@ -1,0 +1,15 @@
+<% var posts = page.posts.data; var nav_selected = page.path.split('/')[0]; %>
+
+<div class="container-lg">
+  <%- partial('_partial/intro') %>
+
+  <div class="blog-detail">
+    <%- partial('_partial/navbar-secondary', {nav_selected: nav_selected}) %> <% console.log(site)
+    %>
+    <div class="body-secondary">
+      <ul class="archive-list"></ul>
+      <%- list_categories({show_count: true}) %> <% console.log(list_categories()) %> <%-
+      list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+    </div>
+  </div>
+</div>
