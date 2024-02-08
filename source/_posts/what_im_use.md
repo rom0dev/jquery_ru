@@ -4,6 +4,10 @@ date: 2023-01-01 00:00:00
 categories: node_modules
 tags:
   - NodeJS
+  - MongoDB
+  - Mysql
+  - Postgres
+  - Redis
 ---
 
 Однажды на собеседовании меня спросили какие модули я использую в работе. Вопрос был неожиданным и я что-то промлямлил. Тогда я и решил собрать список.
@@ -31,7 +35,7 @@ tags:
 * [resp.app](https://resp.app/) - GUI для Redis;
 ## Другое
 * [dBeaver](https://dbeaver.io) - GUI для MysqlPostgres и др
-
+* [MongoDB Compass](https://www.mongodb.com/try/download/shell) - GUI для MongoDB от создателей MongoDB
 # Плагины VSCode:
 * ESLint - Линтер
 * Peacock - используюего для раскраски различных проектов. Так проще их различать. Например работу и свой Пет проджект.
