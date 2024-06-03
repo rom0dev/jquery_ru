@@ -1,0 +1,7 @@
+# Yandex Dzen RSS
+Allow http://jquery.ru/atom.xml
+
+User-agent: *
+Allow: /
+
+Sitemap: https://jquery.ru/sitemap.xml
